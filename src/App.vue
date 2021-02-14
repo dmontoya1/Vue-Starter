@@ -1,6 +1,6 @@
 <template>
   <h1>Vue JS</h1>
-  <Car :power="power" :upPower="upPower" />
+  <Car :power="power" :upPower="upPower" @downPower="downPower" />
   <hr />
 </template>
 
@@ -15,13 +15,17 @@ export default {
     let power = ref(40);
 
     const upPower = () => {
-      console.log("Aumentar Power ....");
       power.value++;
+    };
+
+    const downPower = () => {
+      power.value--;
     };
 
     return {
       power,
       upPower,
+      downPower,
     };
   },
 };
