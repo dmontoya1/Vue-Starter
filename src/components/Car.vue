@@ -3,6 +3,7 @@
   <p>Marca: {{ brand }}</p>
   <p>Modelo: {{ model }}</p>
   <p>Potencia: {{ power }}</p>
+  <button @click="upPower">Aumentar</button>
 </template>
 
 <script>
@@ -12,6 +13,7 @@ export default {
       type: Number,
       default: 60,
     },
+    upPower: Function,
   },
 
   setup(props) {
