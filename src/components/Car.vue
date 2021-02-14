@@ -1,10 +1,12 @@
 <template>
-  <h2>Automóvil - Composition</h2>
-  <p>Marca: {{ brand }}</p>
-  <p>Modelo: {{ model }}</p>
-  <p>Potencia: {{ power }}</p>
-  <button @click="upPower">Aumentar</button>
-  <button @click="downPowerFn">Disminuir</button>
+  <div class="content">
+    <h2 class="title">Automóvil - Composition</h2>
+    <p>Marca: {{ brand }}</p>
+    <p>Modelo: {{ model }}</p>
+    <p>Potencia: {{ power }}</p>
+    <button @click="upPower">Aumentar</button>
+    <button @click="downPowerFn">Disminuir</button>
+  </div>
 </template>
 
 <script>
@@ -36,4 +38,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.content {
+  background-color: gray;
+  .title {
+    color: red;
+  }
+}
+</style>
